@@ -5,6 +5,8 @@ This is a quick setup script for a Vagrant machine.  Tested using VirtualBox and
 It will give you a quick virtual development server with:
 
 PHP 7.2
+
 nginx
+
 MySQL 
 
