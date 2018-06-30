@@ -2,6 +2,7 @@
 Vagrant server setup file and shell script
 
 This is a quick setup script for a Vagrant machine.  Tested using VirtualBox and Vagrant.
+
 It will give you a quick 64 bit Ubuntu 14.04 virtual development server with:
 
 PHP 7.2
