@@ -7,8 +7,20 @@ sudo apt-get install php7.2 php7.2-fpm php7.2-mysql -y
 sudo apt-get --purge autoremove -y
 sudo service php7.2-fpm restart
 
+
+wget http://dev.mysql.com/get/mysql-apt-config_0.6.0-1_all.deb
+export DEBIAN_FRONTEND="noninteractive"
+
+
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
+
+sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5072E1F5
+cat <<- EOF > /etc/apt/sources.list.d/mysql.list
+deb http://repo.mysql.com/apt/ubuntu/ trusty mysql-5.7
+EOF
+sudo apt-get update
+
 sudo apt-get -y install mysql-server mysql-client
 sudo service mysql start
 
