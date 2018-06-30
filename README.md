@@ -10,7 +10,7 @@ nginx
 
 MySQL 5.7
 
-
+Composer
 
 
 
