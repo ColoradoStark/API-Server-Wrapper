@@ -1,4 +1,4 @@
-# LEMP-PHP7.2-nginx-mySQL-ShellScript
+# API Server Wrapper
 Vagrant server setup file and shell script
 
 This is a quick setup script for a Vagrant machine.  Tested using VirtualBox and Vagrant.
