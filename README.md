@@ -1,7 +1,16 @@
 # API Server Wrapper
-Vagrant server setup file and shell script
 
-This is a quick setup script for a Vagrant machine.  Tested using VirtualBox and Vagrant.
+****************BASH SCRIPT FOR GAME API SERVER HOSTING********************
+
+This is a Bourne Again SHell (script) is for the initial setup of a server
+that is meant to host a CRUD API for player data in a Massively Multiplayer 
+Online Game.
+
+The intended use of this server is:
+HTTP based API hosting
+Turn based delayed data that is updated no more than once every 15 minutes.  
+Up to 1 million total users
+Up to 20,000 Max Concurrent users 
 
 It will give you a quick 64 bit Ubuntu 14.04 virtual development server with:
 
@@ -15,11 +24,11 @@ Composer
 
 
 
-
+There is also a Vagrant server setup file.  Tested using VirtualBox and Vagrant.
 
 -------------------------------------------------------------------------------------------
 
-INSTRUCTIONS:
+VAGRANT INSTRUCTIONS:
 
 First install Vagrant and VirtualBox
 
