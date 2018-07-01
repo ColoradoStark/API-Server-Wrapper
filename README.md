@@ -2,7 +2,7 @@
 
 ****************BASH SCRIPT FOR GAME API SERVER HOSTING********************
 
-This is a Bourne Again SHell (script) is for the initial setup of a server
+This is a Bourne Again SHell (BASH) script is for the initial setup of a server
 that is meant to host a CRUD API for player stats and world data to add
 elements of a Massively Multiplayer Online game to a game that is played
 mostly locally.
@@ -20,6 +20,7 @@ nginx
 MySQL 5.7
 
 Composer
+
 
 
 
