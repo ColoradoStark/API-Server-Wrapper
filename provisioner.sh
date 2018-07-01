@@ -8,7 +8,6 @@ sudo apt-get --purge autoremove -y
 sudo service php7.2-fpm restart
 
 
-wget http://dev.mysql.com/get/mysql-apt-config_0.6.0-1_all.deb
 export DEBIAN_FRONTEND="noninteractive"
 
 
@@ -42,7 +41,7 @@ server {
     location ~ \.php\$ {
         try_files \$uri /index.php =404;
         fastcgi_split_path_info ^(.+\.php)(/.+)\$;
-        fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+        fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
         fastcgi_index index.php;
         fastcgi_param SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
         include fastcgi_params;
@@ -51,7 +50,7 @@ server {
 EOM
 sudo service nginx restart
 
-sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 php -r "unlink('composer-setup.php');"
 
