@@ -3,16 +3,15 @@
 ****************BASH SCRIPT FOR GAME API SERVER HOSTING********************
 
 This is a Bourne Again SHell (script) is for the initial setup of a server
-that is meant to host a CRUD API for player data in a Massively Multiplayer 
-Online Game.
+that is meant to host a CRUD API for player stats and world data to add
+elements of a Massively Multiplayer Online game to a game that is played
+mostly locally.
 
-The intended use of this server is:
+The intended use case of this server is:
 HTTP based API hosting
-Turn based delayed data that is updated no more than once every 15 minutes.  
-Up to 1 million total users
-Up to 20,000 Max Concurrent users 
+Storing data that will be updated once every 10 minutes. 
 
-It will give you a quick 64 bit Ubuntu 14.04 virtual development server with:
+It will deploy a 64 bit Ubuntu 14.04 server with:
 
 PHP 7.2
 
@@ -21,6 +20,9 @@ nginx
 MySQL 5.7
 
 Composer
+
+
+
 
 
 
