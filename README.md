@@ -3,13 +3,14 @@
 ****************BASH SCRIPT FOR GAME API SERVER HOSTING********************
 
 This is a Bourne Again SHell (BASH) script is for the initial setup of a server
-that is meant to host a CRUD API for player stats and world data to add
-elements of a Massively Multiplayer Online game to a game that is played
-mostly locally.
+that is meant to host a CRUD API for player stats and world data.  
 
 The intended use case of this server is:
-HTTP based API hosting
-Storing data that will be updated once every 10 minutes. 
+
+1. Add MMO elements to a game that is played mostly locally
+2. Store data that will be updated once every 10 minutes.
+3. HTTP based API hosting
+
 
 It will deploy a 64 bit Ubuntu 14.04 server with:
 
