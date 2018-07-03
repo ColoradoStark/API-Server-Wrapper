@@ -2,15 +2,15 @@
 
 BASH SCRIPT FOR GAME SERVER 
 
-This Bourne Again SHell (BASH) script is for the initial setup of a server
-that is meant to host a CRUD API for player stats and world data.  
+This Bourne Again SHell (BASH) script is for the initial setup of a server.
+It will configure a server with all of the components needed to create a web
+application that will host a CRUD API for player stats and world data.  
 
 The intended use case of this server is:
 
 1. To add MMO elements to a game that is played mostly locally
 2. To store data that will be updated once every 10 minutes
 3. To host an HTTP based CRUD API 
-
 
 It is will configure a 64 bit Ubuntu 14.04 server with:
 
