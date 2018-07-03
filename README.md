@@ -12,7 +12,7 @@ The intended use case of this server is:
 3. To host an HTTP based CRUD API 
 
 
-It will deploy a 64 bit Ubuntu 14.04 server with:
+It is will configure a 64 bit Ubuntu 14.04 server with:
 
 PHP 7.2
 
@@ -27,7 +27,7 @@ Composer
 
 
 
-
+The script is made to work both on the setup of an AWS EC2 instance or on Vagrant.
 There is also a Vagrant server setup file.  Tested using VirtualBox and Vagrant.
 
 -------------------------------------------------------------------------------------------
