@@ -29,7 +29,7 @@ server {
     listen 80 default_server;
     listen [::]:80 default_server ipv6only=on;
 
-    root /vagrant;
+    root /usr/share/nginx/html;
     index index.php index.html index.htm;
 
     server_name server_domain_or_IP;
@@ -49,6 +49,10 @@ server {
 }
 EOM
 sudo service nginx restart
+
+sudo mkdir /usr/share/nginx/html/API
+sudo chown ubuntu:ubuntu /usr/share/nginx/html/API
+echo "ubuntu:ubuntu" | sudo chpasswd
 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php --install-dir=/usr/local/bin --filename=composer
