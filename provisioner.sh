@@ -3,6 +3,7 @@
 sudo apt-get install python-software-properties -y
 sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
+
 sudo apt-get install php7.2 php7.2-fpm php7.2-mysql -y
 sudo apt-get --purge autoremove -y
 sudo service php7.2-fpm restart
@@ -14,7 +15,8 @@ export DEBIAN_FRONTEND="noninteractive"
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password password root'
 sudo debconf-set-selections <<< 'mysql-server mysql-server/root_password_again password root'
 
-sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5072E1F5
+#sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 5072E1F5
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 8C718D3B5072E1F5
 cat <<- EOF > /etc/apt/sources.list.d/mysql.list
 deb http://repo.mysql.com/apt/ubuntu/ trusty mysql-5.7
 EOF
@@ -54,9 +56,12 @@ sudo mkdir /usr/share/nginx/html/API
 sudo chown ubuntu:ubuntu /usr/share/nginx/html/API
 echo "ubuntu:ubuntu" | sudo chpasswd
 
+cd /usr/share/nginx/html/API
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php --install-dir=/usr/local/bin --filename=composer
+php composer-setup.php --prefer-dist
 php -r "unlink('composer-setup.php');"
+
+#php composer.phar create-project slim/slim-skeleton GAME
 
 # Status Reports
 ps aux | grep php-fpm
