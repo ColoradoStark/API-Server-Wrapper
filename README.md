@@ -48,7 +48,7 @@ AMAZON AWS INSTRUCTIONS:
    from the (free) community instances menu
    
 2.  When you reach step 6 toward the bottom of the page there will be an advanced options menu
-    Click that and Select File.  Upload the file provisioner.sh
+    Click that and then click the "Select File" checkbox.  Next upload the file provisioner.sh.
     
 3.  Finish launching the instance.
    
