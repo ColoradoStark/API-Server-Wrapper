@@ -35,7 +35,7 @@ script with the intention of creating an environment on the local machine identi
 production environment on AWS.  With all of the necessary tools to build a game data hosting
 web API
 
-Tested on AWS using Community Server:  ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server
+Tested on AWS using AMI - Ubuntu Server 16.04 LTS (HVM), SSD Volume Type
 Tested using VirtualBox and Vagrant.
 
 -------------------------------------------------------------------------------------------
@@ -44,8 +44,7 @@ AMAZON AWS INSTRUCTIONS:
 
 1. Follow the first 5 steps to Launch a Linux instance on this page: 
    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html#launch-instance-console
-   For the Instance Type Select the latest build of:  ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server
-   from the (free) community instances menu
+   For the Instance Type Select:  Ubuntu Server 16.04 LTS (HVM), SSD Volume Type
    
 2.  When you reach step 6 toward the bottom of the page there will be an advanced Details menu
     Click that and then under User Data click the "As File" checkbox.  Click the choose file button
