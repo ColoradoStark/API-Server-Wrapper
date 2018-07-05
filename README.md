@@ -12,25 +12,48 @@ The intended use case of this server is:
 2. To store data that will be updated once every 10 minutes
 3. To host an HTTP based CRUD API 
 
-It is will configure a 64 bit Ubuntu 14.04 server with:
-
-PHP 7.2
+It will configure a 64 bit Ubuntu 16.04 server with:
 
 nginx
+
+PHP 7.2
 
 MySQL 5.7
 
 Composer
 
+Slim Framework
 
 
+The script is made to work both on the setup of a Free Tier Amazon EC2 instance or 
+on local development enviroment using Vagrant.   A lot of the vagrant setup scripts
+I found had settings very different from the standard live servers on Amazon.  And
+I  ended up looking up all sorts of console commands to get everything working.  
 
+Later I forgot what I did and the two environments were very different.  I wrote this
+script with the intention of creating an environment on the local machine identical to the
+production environment on AWS.  With all of the necessary tools to build a game data hosting
+web API
 
-
-The script is made to work both on the setup of an AWS EC2 instance or on Vagrant.
-There is also a Vagrant server setup file.  Tested using VirtualBox and Vagrant.
+Tested on AWS using Community Server:  ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server
+Tested using VirtualBox and Vagrant.
 
 -------------------------------------------------------------------------------------------
+
+AMAZON AWS INSTRUCTIONS:
+
+1. Follow the first 5 steps to Launch a Linux instance on this page: 
+   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html#launch-instance-console
+   For the Instance Type Select the latest build of:  ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server
+   from the (free) community instances menu
+   
+2.  When you reach step 6 toward the bottom of the page there will be an advanced options menu
+    Click that and Select File.  Upload the file provisioner.sh
+    
+3.  Finish launching the instance.
+   
+
+---------------------------------------------------------------------------------------------
 
 VAGRANT INSTRUCTIONS:
 
