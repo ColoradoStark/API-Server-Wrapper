@@ -32,7 +32,7 @@ echo debconf mysql-server/root_password password $MYSQL_ROOT_PASSWORD | sudo deb
 echo debconf mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD | sudo debconf-set-selections
 #sudo debconf-set-selections <<< "mysql-server-5.7 mysql-server/root_password password $MYSQL_ROOT_PASSWORD"
 #sudo debconf-set-selections <<< "mysql-server-5.7 mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD"
-sudo apt-get -qq install mysql-server > /dev/null # Install MySQL quietly
+sudo apt-get -qq install mysql-server mysql-client > /dev/null # Install MySQL quietly
 
 # Install Expect
 sudo apt-get -qq install expect > /dev/null
@@ -108,17 +108,15 @@ server {
 EOM
 sudo service nginx restart
 
-#sudo mkdir /usr/share/nginx/html/API
-sudo chown ubuntu:ubuntu /usr/share/nginx/html #/API
-#echo "ubuntu:ubuntu" | sudo chpasswd
-
 cd /usr/share/nginx/html #/API
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php --prefer-dist
+php composer-setup.php --prefer-dist --no-plugins --no-scripts
 php -r "unlink('composer-setup.php');"
 
-#sudo apt-get install php7.2-xml
+
 php composer.phar create-project slim/slim-skeleton API
+
+sudo chown ubuntu:ubuntu /usr/share/nginx/html/API
 
 # Status Reports
 ps aux | grep php-fpm
