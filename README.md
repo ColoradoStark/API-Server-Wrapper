@@ -47,8 +47,9 @@ AMAZON AWS INSTRUCTIONS:
    For the Instance Type Select the latest build of:  ubuntu/images/hvm-ssd/ubuntu-xenial-16.04-amd64-server
    from the (free) community instances menu
    
-2.  When you reach step 6 toward the bottom of the page there will be an advanced options menu
-    Click that and then click the "Select File" checkbox.  Next upload the file provisioner.sh.
+2.  When you reach step 6 toward the bottom of the page there will be an advanced Details menu
+    Click that and then under User Data click the "As File" checkbox.  Click the choose file button
+    then upload the file provisioner.sh.
     
 3.  Finish launching the instance.
    
