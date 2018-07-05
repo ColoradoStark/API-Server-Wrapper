@@ -35,8 +35,11 @@ script with the intention of creating an environment on the local machine identi
 production environment on AWS.  With all of the necessary tools to build a game data hosting
 web API
 
+**** COMPATIBILITY TESTS
+
 Tested on AWS using AMI - Ubuntu Server 16.04 LTS (HVM), SSD Volume Type
-Tested using VirtualBox and Vagrant.
+
+Tested locally using VirtualBox and Vagrant.
 
 -------------------------------------------------------------------------------------------
 
