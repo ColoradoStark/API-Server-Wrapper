@@ -92,7 +92,13 @@ server {
 EOM
 sudo service nginx restart
 
-cd /usr/share/nginx/html 
+sudo chown ubuntu:ubuntu /usr/share/nginx/html
+
+#cd /usr/share/nginx/html 
+jhome () {
+  cd /usr/share/nginx/html
+}
+
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php --prefer-dist --no-plugins --no-scripts
 php -r "unlink('composer-setup.php');"
@@ -100,7 +106,7 @@ php -r "unlink('composer-setup.php');"
 
 php composer.phar create-project slim/slim-skeleton API
 
-sudo chown ubuntu:ubuntu /usr/share/nginx/html/API
+
 
 # Status Reports
 ps aux | grep php-fpm
