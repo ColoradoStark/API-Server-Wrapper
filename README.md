@@ -24,7 +24,6 @@ Composer
 
 Slim Framework
 
-
 The script is made to work both on the setup of a Free Tier Amazon EC2 instance or 
 on local development enviroment using Vagrant.   A lot of the vagrant setup scripts
 I found had settings very different from the standard live servers on Amazon.  And
@@ -51,9 +50,15 @@ AMAZON AWS INSTRUCTIONS:
    
 2.  When you reach step 6 toward the bottom of the page there will be an advanced Details menu
     Click that and then under User Data click the "As File" checkbox.  Click the choose file button
-    then upload the file provisioner.sh.
+    then select the file provisioner.sh.
     
-3.  Finish launching the instance.
+3.  Finish launching the instance.  
+
+    NOTE:  To check if everything is set up properly;
+           SSH in then type: 
+           cat /var/log/syslog  
+
+    NOTE:  Don't forget to change your MySQL Password 
    
 
 ---------------------------------------------------------------------------------------------
