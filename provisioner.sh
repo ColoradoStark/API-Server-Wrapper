@@ -4,6 +4,7 @@ sudo apt-get install python-software-properties -y
 sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 
+sudo apt-get install zip unzip
 sudo apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-xml -y
 sudo apt-get --purge autoremove -y
 sudo service php7.2-fpm restart
@@ -98,6 +99,8 @@ sudo chown ubuntu:ubuntu /usr/share/nginx/html
 jhome () {
   cd /usr/share/nginx/html
 }
+
+jhome
 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php --prefer-dist --no-plugins --no-scripts
