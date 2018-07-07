@@ -95,23 +95,20 @@ sudo service nginx restart
 
 sudo chown ubuntu:ubuntu /usr/share/nginx/html
 
-#cd /usr/share/nginx/html 
-jhome () {
-  cd /usr/share/nginx/html
-}
-
-jhome
+# Set the environment variable so composer will work during EC2 instance launch 
+export COMPOSER_HOME=/root 
 
 php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
-php composer-setup.php --prefer-dist --no-plugins --no-scripts
+php composer-setup.php --install-dir=/usr/share/nginx/html --prefer-dist --no-plugins --no-scripts
 php -r "unlink('composer-setup.php');"
 
-
-php composer.phar create-project slim/slim-skeleton API
-
+php /usr/share/nginx/html/composer.phar create-project slim/slim-skeleton /usr/share/nginx/html/API
 
 
 # Status Reports
 ps aux | grep php-fpm
 service mysql status
 service nginx status
+
+# Use this command to view the setup log of your EC2 instance in SSH:
+# cat /var/log/syslog
