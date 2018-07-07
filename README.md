@@ -3,8 +3,9 @@
 BASH SCRIPT FOR GAME SERVER 
 
 This Bourne Again SHell (BASH) script is for the initial setup of a server.
-It will configure a server with all of the components needed to create a web
-application that will host a CRUD API for player stats and world data.  
+It will configure an EC2 instance or Vagrant VM with all of the components 
+needed to create a web application that will host a CRUD API for player stats 
+and world data.  
 
 The intended use case of this server is:
 
@@ -27,12 +28,13 @@ Slim Framework
 The script is made to work both on the setup of a Free Tier Amazon EC2 instance or 
 on local development enviroment using Vagrant.   A lot of the vagrant setup scripts
 I found had settings very different from the standard live servers on Amazon.  And
-I  ended up looking up all sorts of console commands to get everything working.  
+I  ended up needing to SSH in, then look up and try all sorts of console commands 
+to get everything working.  Later I forgot what I did and the two environments were 
+very different.  
 
-Later I forgot what I did and the two environments were very different.  I wrote this
-script with the intention of creating an environment on the local machine identical to the
-production environment on AWS.  With all of the necessary tools to build a game data hosting
-web API
+I wrote this script with the intention of creating an environment on the local machine 
+identical to the production environment on AWS.  With all of the necessary tools to build 
+a game data hosting web API
 
 **** COMPATIBILITY TESTS
 
