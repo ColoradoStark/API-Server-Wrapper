@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo apt-get install python-software-properties -y
 sudo LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php -y
 sudo apt-get update
 
@@ -92,6 +91,7 @@ server {
 }
 EOM
 sudo service nginx restart
+service nginx status
 
 sudo chown ubuntu:ubuntu /usr/share/nginx/html
 
@@ -104,6 +104,33 @@ php -r "unlink('composer-setup.php');"
 
 php /usr/share/nginx/html/composer.phar create-project slim/slim-skeleton /usr/share/nginx/html/API
 
+
+sudo service nginx stop
+sudo cat > /etc/nginx/sites-available/default <<- EOM
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+
+    root /usr/share/nginx/html/API/public;
+    index index.php index.html index.htm;
+
+    server_name server_domain_or_IP;
+
+    location / {
+        try_files \$uri \$uri/ /index.php?\$query_string;
+    }
+
+    location ~ \.php\$ {
+        try_files \$uri /index.php =404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)\$;
+        fastcgi_pass unix:/var/run/php/php7.2-fpm.sock;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME \$document_root\$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+EOM
+sudo service nginx restart
 
 # Status Reports
 ps aux | grep php-fpm
