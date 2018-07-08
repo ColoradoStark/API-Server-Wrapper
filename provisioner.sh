@@ -132,6 +132,8 @@ server {
 EOM
 sudo service nginx restart
 
+sudo chown ubuntu:ubuntu /usr/share/nginx/html -R
+
 # Status Reports
 ps aux | grep php-fpm
 service mysql status
