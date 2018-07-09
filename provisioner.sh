@@ -132,11 +132,11 @@ server {
 EOM
 sudo service nginx restart
 
+sudo chown ubuntu:ubuntu /usr/share/nginx/html -R
+
 sudo touch /usr/share/nginx/html/API/logs/app.log
 sudo chown www-data:www-data /usr/share/nginx/html/API/logs/app.log
 sudo chmod 775 /usr/share/nginx/html/API/logs/app.log
-
-sudo chown ubuntu:ubuntu /usr/share/nginx/html -R
 
 # Status Reports
 ps aux | grep php-fpm
