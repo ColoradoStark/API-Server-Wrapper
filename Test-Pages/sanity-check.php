@@ -1,3 +1,3 @@
 <?php
 echo 'Sanity Check:  ';
-echo 'Yes, It is working.';
+echo 'Yes, PHP is running.';
