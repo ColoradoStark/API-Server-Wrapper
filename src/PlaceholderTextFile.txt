@@ -1,0 +1,2 @@
+This folder is for synchronizing the desktop with Vagrant
+This file is only here because github does not want to include empty folders
