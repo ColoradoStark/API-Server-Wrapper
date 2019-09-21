@@ -8,6 +8,8 @@ sudo apt-get install php7.2 php7.2-fpm php7.2-mysql php7.2-xml -y
 sudo apt-get --purge autoremove -y
 sudo service php7.2-fpm restart
 
+sudo apt-get install php7.2-mbstring
+
 
 export DEBIAN_FRONTEND=noninteractive
 
