@@ -104,7 +104,7 @@ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 php composer-setup.php --install-dir=/usr/share/nginx/html --prefer-dist --no-plugins --no-scripts
 php -r "unlink('composer-setup.php');"
 
-php /usr/share/nginx/html/composer.phar create-project slim/slim-skeleton /usr/share/nginx/html/API
+php /usr/share/nginx/html/composer.phar create-project slim/slim-skeleton /usr/share/nginx/html/API 3.*
 
 
 sudo service nginx stop
