@@ -13,7 +13,7 @@ The intended use case of this server is:
 2. To store data that will be updated once every 10 minutes
 3. To host an HTTP based CRUD API 
 
-It will configure a 64 bit Ubuntu 16.04 server with:
+It will configure a 64 bit Ubuntu 18.04 server with:
 
 nginx
 
@@ -23,7 +23,7 @@ MySQL 5.7
 
 Composer
 
-Slim Framework
+Slim Framework version 3
 
 The script is made to work both on the setup of a Free Tier Amazon EC2 instance or 
 on local development enviroment using Vagrant.   A lot of the vagrant setup scripts
@@ -38,7 +38,7 @@ a game data hosting web API
 
 **** COMPATIBILITY TESTS
 
-Tested on AWS using AMI - Ubuntu Server 16.04 LTS (HVM), SSD Volume Type
+Tested on AWS using AMI - Ubuntu Server 18.04 LTS (HVM), SSD Volume Type
 
 Tested locally using VirtualBox and Vagrant.
 
