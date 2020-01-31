@@ -48,7 +48,7 @@ AMAZON AWS INSTRUCTIONS:
 
 1. Follow the first 5 steps to Launch a Linux instance on this page: 
    https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/launching-instance.html#launch-instance-console
-   For the Instance Type Select:  Ubuntu Server 16.04 LTS (HVM), SSD Volume Type
+   For the Instance Type Select:  Ubuntu Server 18.04 LTS (HVM), SSD Volume Type
    
 2.  When you reach step 6 toward the bottom of the page there will be an advanced Details menu
     Click that and then under User Data click the "As File" checkbox.  Click the choose file button
